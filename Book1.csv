@@ -1,0 +1,29 @@
+username,password,Exp_auth_code,createBookingPayload,createBookingExp
+admin,password123,200,"{
+      ""lastname"" : ""1233"",
+    ""totalprice"" : 23,
+    ""depositpaid"" : true,
+    ""bookingdates"" : {
+        ""checkin"" : ""2024-11-01"",
+        ""checkout"" : ""2025-01-01""
+    },
+    ""additionalneeds"" : ""Lunch""
+}",500
+admin123,password123,200,"{
+     ""firstname"" : ""TS"",
+     ""lastname"" : ""1233"",
+    ""totalprice"" : 23,
+    ""depositpaid"" : true,
+     ""additionalneeds"" : ""Lunch""
+}",500
+admin,password,200,"{
+     ""firstname"" : ""TS222"",
+     ""lastname"" : ""1233"",
+    ""totalprice"" : 23,
+    ""depositpaid"" : true,
+    ""bookingdates"" : {
+        ""checkin"" : ""2024-11-01"",
+        ""checkout"" : ""2025-01-01""
+    },
+    ""additionalneeds"" : ""Lunch""
+}",200

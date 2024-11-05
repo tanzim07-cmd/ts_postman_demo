@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "08e7699e-b36d-4aa9-93e2-c84ceae4e001",
+		"name": "BookerAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39020267",
+		"_collection_link": "https://lively-star-844372.postman.co/workspace/9d8e7ccc-27b5-459a-a4d3-5c583f387f99/collection/39020267-08e7699e-b36d-4aa9-93e2-c84ceae4e001?action=share&source=collection_link&creator=39020267"
+	},
+	"item": [
+		{
+			"name": "CreateToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const responseData = pm.response.json();\r",
+							"const exp_status_code = pm.iterationData.get(\"Exp_auth_code\");\r",
+							"pm.test(\"Validate Response status code for valid and invalid credentials\", function () {\r",
+							"  pm.expect(pm.response.code).to.equal(exp_status_code);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"{{username}}\",\r\n    \"password\" : \"{{password}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bookerUrl}}/auth",
+					"host": [
+						"{{bookerUrl}}"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
